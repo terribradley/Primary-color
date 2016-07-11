@@ -1,7 +1,37 @@
-$column-width: 20%;
-$tint-column-width: 33%;
-$column-height: 15vh;
-$mint: rgb(217, 245, 232);
-$teal: rgb(55, 203, 194);
-$gold: rgb(255, 187, 51);
-$tomato: rgb(255, 99, 71);
+// $column-width: 20%;
+// $tint-column-width: 33%;
+// $column-height: 15vh;
+// $mix-column-height: 8vh;
+// // $mint: rgb(217, 245, 232);
+// // $teal: rgb(55, 203, 194);
+// // $gold: rgb(255, 187, 51);
+// // $tomato: rgb(255, 99, 71);
+
+
+$color1: rgb(217, 245, 232);
+$color1-name: "Mint";
+
+$color2: rgb(55, 203, 194);
+$color2-name: "Teal";
+
+$color3: rgb(255, 187, 51);
+$color3-name: "Gold";
+
+$color4:rgb(255, 99, 71);
+$color4-name: "Tomato";
+
+$mix-weight: 65%;
+
+$colors: (
+    primary: $color1,
+    secondary: $color2,
+    tertiary: $color3,
+    accent: $color4
+);
+
+$colors-names: (
+    primary: $color1-name,
+    secondary: $color2-name,
+    tertiary: $color2-name,
+    accent: $color3-name
+);

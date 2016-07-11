@@ -1,91 +1,80 @@
-.primary-colors, .tints {
-  *zoom: 1; }
-  .primary-colors:before, .tints:before, .primary-colors:after, .tints:after {
-    content: " ";
-    display: table; }
-  .primary-colors:after, .tints:after {
-    clear: both; }
+.color-primary .swatch {
+  background: #d9f5e8; }
 
-.mint, .teal, .gold, .tomato, .mintTint, .tealTint, .goldTint, .tomatoTint, .color-properties, .light, .medium, .dark {
-  float: left; }
+.color-primary .mixed-with-primary .swatch {
+  background: #d9f5e8; }
 
-.mint, .teal, .gold, .tomato, .mintTint, .tealTint, .goldTint, .tomatoTint {
-  width: 20%;
-  height: 15vh;
-  margin: 2% 6.667% 5% 0;
-  position: relative; }
+.color-secondary .mixed-with-primary .swatch {
+  background: #a0e6db; }
 
-.mint, .mintTint {
-  margin-left: 0; }
+.color-tertiary .mixed-with-primary .swatch {
+  background: #e6e1a9; }
 
-.tomato, .tomatoTint {
-  margin-right: 0; }
+.color-accent .mixed-with-primary .swatch {
+  background: #e6c2b0; }
 
-.color-properties, .color-values {
-  position: absolute;
-  top: 100%; }
+.color-secondary .swatch {
+  background: #37cbc2; }
 
-.color-values {
-  right: 0%;
-  text-align: right; }
+.color-primary .mixed-with-secondary .swatch {
+  background: #70dacf; }
 
-.content-container {
-  width: 90vw;
-  height: 100vh; }
+.color-secondary .mixed-with-secondary .swatch {
+  background: #37cbc2; }
 
-.mint, .mintTint {
-  background-color: #d9f5e8; }
+.color-tertiary .mixed-with-secondary .swatch {
+  background: #7dc590; }
 
-.teal {
-  background-color: #37cbc2; }
+.color-accent .mixed-with-secondary .swatch {
+  background: #7da797; }
 
-.gold {
-  background-color: #ffbb33; }
+.color-tertiary .swatch {
+  background: #ffbb33; }
 
-.tomato, .tomatoTint {
-  background-color: tomato; }
+.color-primary .mixed-with-tertiary .swatch {
+  background: #f2cf72; }
 
-.light, .medium, .dark {
-  width: 33%;
-  height: 15vh; }
+.color-secondary .mixed-with-tertiary .swatch {
+  background: #b9c165; }
 
-.mintTint .light {
-  background-color: #edfaf4; }
+.color-tertiary .mixed-with-tertiary .swatch {
+  background: #ffbb33; }
 
-.mintTint .medium {
-  background-color: #d9f5e8; }
+.color-accent .mixed-with-tertiary .swatch {
+  background: #ff9c3a; }
 
-.mintTint .dark {
-  background-color: #b1ead0; }
+.color-accent .swatch {
+  background: tomato; }
 
-.tealTint .light {
-  background-color: #5fd6ce; }
+.color-primary .mixed-with-accent .swatch {
+  background: #f2967f; }
 
-.tealTint .medium {
-  background-color: #37cbc2; }
+.color-secondary .mixed-with-accent .swatch {
+  background: #b98772; }
 
-.tealTint .dark {
-  background-color: #2ba49d; }
+.color-tertiary .mixed-with-accent .swatch {
+  background: #ff8240; }
 
-.goldTint .light {
-  background-color: #ffcc66; }
+.color-accent .mixed-with-accent .swatch {
+  background: tomato; }
 
-.goldTint .medium {
-  background-color: #ffbb33; }
+.swatch {
+  width: 100%;
+  height: 150px;
+  margin-bottom: 2rem; }
+  .swatch.swatch-small {
+    height: 50px; }
 
-.goldTint .dark {
-  background-color: #ffaa00; }
+.mixed-with-primary h4:before {
+  content: "Mixed with 65% Mint"; }
 
-.tomatoTint .light {
-  background-color: #ff8e7a; }
+.mixed-with-secondary h4:before {
+  content: "Mixed with 65% Teal"; }
 
-.tomatoTint .medium {
-  background-color: tomato; }
+.mixed-with-tertiary h4:before {
+  content: "Mixed with 65% Gold"; }
 
-.tomatoTint .dark {
-  background-color: #ff3814; }
-
-.tints {
-  margin-top: 10%; }
+.mixed-with-accent h4:before {
+  content: "Mixed with 65% Gold"; }
 
 /*# sourceMappingURL=main.css.map */

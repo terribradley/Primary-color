@@ -1,100 +1,167 @@
 @import "_variables.scss";
 @import "_mixins.scss";
 
-.content-container {
-  width: 90vw;
-  height: 100vh;
-}
-.primary-colors, .tints {
-  @extend %clearfix;
+// .content-container {
+//   width: 90vw;
+//   height: 100vh;
+// }
+// .primary-colors, .tints, .gen-mint, .gen-teal, .gen-gold, .gen-tomato {
+//   @extend %clearfix;
+// }
+//
+// .mint, .teal, .gold, .tomato, .mintTint, .tealTint, .goldTint, .tomatoTint {
+//   @extend %column;
+// }
+//
+// .mint, .mintTint, .original-mint, .mint-mix {
+//   background-color: $mint;
+//   @extend %column1-margin;
+// }
+//
+// .teal, .original-teal {
+//   background-color: $teal;
+// }
+//
+// .gold, .original-gold {
+//   background-color: $gold;
+// }
+//
+// .tomato, .tomatoTint, .original-tomato {
+//   background-color: $tomato;
+//   @extend %column2-margin;
+// }
+//
+// .color-properties {
+//   @extend %color-text-position;
+//   @extend %go-left;
+// }
+//
+// .color-values {
+//   @extend %color-text-position;
+//   @extend %color-text-position-right;
+// }
+//
+// .light, .medium, .dark {
+//   width: $tint-column-width;
+//   height: $column-height;
+//   @extend %go-left;
+// }
+//
+// .mintTint .light {
+//   background-color: lighten($mint, 5%);
+// }
+//
+// .mintTint .medium {
+//   background-color: $mint;
+// }
+//
+// .mintTint .dark {
+//   background-color: darken($mint, 10%);
+// }
+//
+// .tealTint .light {
+//   background-color: lighten($teal, 10%);
+// }
+//
+// .tealTint .medium {
+//   background-color: $teal;
+// }
+//
+// .tealTint .dark {
+//   background-color: darken($teal, 10%);
+// }
+//
+// .goldTint .light {
+//   background-color: lighten($gold, 10%);
+// }
+//
+// .goldTint .medium {
+//   background-color: $gold;
+// }
+//
+// .goldTint .dark {
+//   background-color: darken($gold, 10%);
+// }
+//
+// .tomatoTint .light {
+//   background-color: lighten($tomato, 10%);
+// }
+//
+// .tomatoTint .medium {
+//   background-color: $tomato;
+// }
+//
+// .tomatoTint .dark {
+//   background-color: darken($tomato, 10%);
+// }
+//
+// .tints {
+//   margin-top: 10%;
+// }
+// .gen-mint, .gen-teal, .gen-gold, .gen-tomato {
+//   @extend %column2;
+// }
+// .gen-tomato {
+//   margin: 0;
+// }
+// .mint-mix, .teal-mix, .gold-mix, .tomato-mix {
+//   @extend %mix-columns;
+// }
+
+//
+// .original-mint, .original-teal, .original-gold, .original-tomato {
+//   @extend %original-colors;
+// }
+//  .original-mint {
+//   background-color: $mint;
+// }
+// .original-tomato {
+//   background-color: $tomato;
+// }
+// .mint-mix {
+//   @include mix($mint, $teal)
+// }
+
+
+@each $color-name, $color-value in $colors {
+  .color-#{$color-name} .swatch {
+          background: $color-value;
+      }
+  .color-primary .mixed-with-#{$color-name} .swatch {
+        background: mix($color-value, $color1, $mix-weight);
+    }
+    .color-secondary .mixed-with-#{$color-name} .swatch {
+          background: mix($color-value, $color2, $mix-weight);
+      }
+      .color-tertiary .mixed-with-#{$color-name} .swatch {
+        background: mix($color-value, $color3, $mix-weight);
+    }
+    .color-accent .mixed-with-#{$color-name} .swatch {
+        background: mix($color-value, $color4, $mix-weight);
+    }
 }
 
-.mint, .teal, .gold, .tomato, .mintTint, .tealTint, .goldTint, .tomatoTint {
-  @extend %column;
+.swatch {
+    width: 100%;
+    height: 150px;
+    margin-bottom: 2rem;
+
+    &.swatch-small {
+        height: 50px;
+    }
+}
+.mixed-with-primary h4:before {
+    content: 'Mixed with #{$mix-weight} #{$color1-name}';
 }
 
-.mint, .mintTint {
-  background-color: $mint;
-  @extend %column1-margin;
+.mixed-with-secondary h4:before {
+    content: 'Mixed with #{$mix-weight} #{$color2-name}';
 }
 
-.teal {
-  background-color: $teal;
+.mixed-with-tertiary h4:before {
+    content: 'Mixed with #{$mix-weight} #{$color3-name}';
 }
 
-.gold {
-  background-color: $gold;
-}
-
-.tomato, .tomatoTint {
-  background-color: $tomato;
-  @extend %column2-margin;
-}
-
-.color-properties {
-  @extend %color-text-position;
-  @extend %go-left;
-}
-
-.color-values {
-  @extend %color-text-position;
-  @extend %color-text-position-right;
-}
-
-.light, .medium, .dark {
-  width: $tint-column-width;
-  height: $column-height;
-  @extend %go-left;
-}
-
-.mintTint .light {
-  background-color: lighten($mint, 5%);
-}
-
-.mintTint .medium {
-  background-color: $mint;
-}
-
-.mintTint .dark {
-  background-color: darken($mint, 10%);
-}
-
-.tealTint .light {
-  background-color: lighten($teal, 10%);
-}
-
-.tealTint .medium {
-  background-color: $teal;
-}
-
-.tealTint .dark {
-  background-color: darken($teal, 10%);
-}
-
-.goldTint .light {
-  background-color: lighten($gold, 10%);
-}
-
-.goldTint .medium {
-  background-color: $gold;
-}
-
-.goldTint .dark {
-  background-color: darken($gold, 10%);
-}
-
-.tomatoTint .light {
-  background-color: lighten($tomato, 10%);
-}
-
-.tomatoTint .medium {
-  background-color: $tomato;
-}
-
-.tomatoTint .dark {
-  background-color: darken($tomato, 10%);
-}
-
-.tints {
-  margin-top: 10%;
+.mixed-with-accent h4:before {
+    content: 'Mixed with #{$mix-weight} #{$color3-name}';
 }

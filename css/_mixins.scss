@@ -10,35 +10,65 @@
     }
 }
 
-%go-left {
-  float: left;
-}
-
-%go-right {
-  float: right;
-}
-
-%column {
-  width: $column-width;
-  height: $column-height;
-  margin: 2% 6.667% 5% 0;
-  @extend %go-left;
-  position: relative;
-}
-
-%column1-margin {
-  margin-left: 0;
-}
-
-%column2-margin {
-  margin-right: 0;
-}
-
-%color-text-position {
-  position: absolute;
-  top: 100%;
-}
-%color-text-position-right {
-  right: 0%;
-  text-align: right;
-}
+// %go-left {
+//   float: left;
+// }
+//
+// %go-right {
+//   float: right;
+// }
+//
+// %column {
+//   width: $column-width;
+//   height: $column-height;
+//   margin: 2% 6.667% 5% 0;
+//   float:left;
+//   @extend %go-left;
+//   position: relative;
+//
+// }
+// %column2 {
+//   width: $column-width;
+//   height: 900px;
+//   margin: 2% 6.667% 5% 0;
+//   float:left;
+// }
+// %mix-columns {
+//   width: 100%;
+//   height: $mix-column-height;
+//   margin: 0;
+// }
+// %original-colors {
+//   width: 100%;
+//   height: $column-height;
+// }
+//
+// %column1-margin {
+//   margin-left: 0;
+// }
+//
+// %column2-margin {
+//   margin-right: 0;
+// }
+//
+// %color-text-position {
+//   position: absolute;
+//   top: 100%;
+// }
+// %color-text-position-right {
+//   right: 0%;
+//   text-align: right;
+// }
+//
+// @mixin mix($color1, $color2, $weight:65%) {
+//
+//
+//
+// each background-colour in mint, teal.. {
+//   .div 1{
+//     background-color: mix(BGC, mint)
+//   }
+//   .div 2{
+//     background-color: mix(BGV, teal)
+//   }
+// }
