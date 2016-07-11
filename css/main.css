@@ -1,0 +1,51 @@
+.primary-colors {
+  *zoom: 1; }
+  .primary-colors:before, .primary-colors:after {
+    content: " ";
+    display: table; }
+  .primary-colors:after {
+    clear: both; }
+
+.mint, .teal, .gold, .tomato, .color-properties {
+  float: left; }
+
+.color-values {
+  float: right; }
+
+.mint, .teal, .gold, .tomato {
+  width: 20%;
+  height: 15vh;
+  margin: 2% 6.667% 5% 0;
+  position: relative; }
+
+.mint {
+  margin-left: 0; }
+
+.tomato {
+  margin-right: 0; }
+
+.color-properties, .color-values {
+  position: absolute;
+  top: 100%; }
+
+.color-values {
+  right: 0%;
+  text-align: right; }
+
+.content-container {
+  width: 90vw;
+  height: 100vh; }
+
+.mint {
+  background-color: #d9f5e8; }
+
+.teal {
+  background-color: #37cbc2; }
+
+.gold {
+  background-color: #ffbb33; }
+
+.tomato {
+  background-color: tomato; }
+
+/*# sourceMappingURL=main.css.map */

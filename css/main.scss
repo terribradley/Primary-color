@@ -1,0 +1,43 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+.content-container {
+  width: 90vw;
+  height: 100vh;
+}
+.primary-colors {
+  @extend %clearfix;
+}
+
+.mint, .teal, .gold, .tomato {
+  @extend %column;
+}
+
+.mint {
+  background-color: $mint;
+  @extend %column1-margin;
+}
+
+.teal {
+  background-color: $teal;
+}
+
+.gold {
+  background-color: $gold;
+}
+
+.tomato {
+  background-color: $tomato;
+  @extend %column2-margin;
+}
+
+.color-properties {
+  @extend %color-text-position;
+  @extend %go-left;
+}
+
+.color-values {
+  @extend %color-text-position;
+  @extend %color-text-position-right;
+  @extend %go-right;
+}
