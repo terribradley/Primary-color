@@ -5,15 +5,15 @@
   width: 90vw;
   height: 100vh;
 }
-.primary-colors {
+.primary-colors, .tints {
   @extend %clearfix;
 }
 
-.mint, .teal, .gold, .tomato {
+.mint, .teal, .gold, .tomato, .mintTint, .tealTint, .goldTint, .tomatoTint {
   @extend %column;
 }
 
-.mint {
+.mint, .mintTint {
   background-color: $mint;
   @extend %column1-margin;
 }
@@ -26,7 +26,7 @@
   background-color: $gold;
 }
 
-.tomato {
+.tomato, .tomatoTint {
   background-color: $tomato;
   @extend %column2-margin;
 }
@@ -39,5 +39,62 @@
 .color-values {
   @extend %color-text-position;
   @extend %color-text-position-right;
-  @extend %go-right;
+}
+
+.light, .medium, .dark {
+  width: $tint-column-width;
+  height: $column-height;
+  @extend %go-left;
+}
+
+.mintTint .light {
+  background-color: lighten($mint, 5%);
+}
+
+.mintTint .medium {
+  background-color: $mint;
+}
+
+.mintTint .dark {
+  background-color: darken($mint, 10%);
+}
+
+.tealTint .light {
+  background-color: lighten($teal, 10%);
+}
+
+.tealTint .medium {
+  background-color: $teal;
+}
+
+.tealTint .dark {
+  background-color: darken($teal, 10%);
+}
+
+.goldTint .light {
+  background-color: lighten($gold, 10%);
+}
+
+.goldTint .medium {
+  background-color: $gold;
+}
+
+.goldTint .dark {
+  background-color: darken($gold, 10%);
+}
+
+.tomatoTint .light {
+  background-color: lighten($tomato, 10%);
+}
+
+.tomatoTint .medium {
+  background-color: $tomato;
+}
+
+.tomatoTint .dark {
+  background-color: darken($tomato, 10%);
+}
+
+.tints {
+  margin-top: 10%;
 }
